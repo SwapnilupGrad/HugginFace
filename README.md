@@ -54,6 +54,29 @@ More information needed
 
 ## Training procedure
 
+This model is trained using the [run_glue](https://github.com/huggingface/transformers/blob/master/examples/pytorch/text-classification/run_glue.py) script. The following command was used:
+
+```bash
+#!/usr/bin/bash
+
+python ../run_glue.py \
+  --model_name_or_path bert-base-cased \
+  --task_name qqp \
+  --do_train \
+  --do_eval \
+  --max_seq_length 512 \
+  --per_device_train_batch_size 16 \
+  --learning_rate 2e-5 \
+  --num_train_epochs 3 \
+  --output_dir bert-base-cased-finetuned-qqp \
+  --push_to_hub \
+  --hub_strategy all_checkpoints \
+  --logging_strategy epoch \
+  --save_strategy epoch \
+  --evaluation_strategy epoch \
+```
+
+
 ### Training hyperparameters
 
 The following hyperparameters were used during training:
