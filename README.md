@@ -4,6 +4,7 @@ language:
 license: apache-2.0
 tags:
 - generated_from_trainer
+- fnet-bert-base-comparison
 datasets:
 - glue
 metrics:
@@ -59,22 +60,7 @@ This model is trained using the [run_glue](https://github.com/huggingface/transf
 ```bash
 #!/usr/bin/bash
 
-python ../run_glue.py \
-  --model_name_or_path bert-base-cased \
-  --task_name qqp \
-  --do_train \
-  --do_eval \
-  --max_seq_length 512 \
-  --per_device_train_batch_size 16 \
-  --learning_rate 2e-5 \
-  --num_train_epochs 3 \
-  --output_dir bert-base-cased-finetuned-qqp \
-  --push_to_hub \
-  --hub_strategy all_checkpoints \
-  --logging_strategy epoch \
-  --save_strategy epoch \
-  --evaluation_strategy epoch \
-```
+python ../run_glue.py \\n  --model_name_or_path bert-base-cased \\n  --task_name qqp \\n  --do_train \\n  --do_eval \\n  --max_seq_length 512 \\n  --per_device_train_batch_size 16 \\n  --learning_rate 2e-5 \\n  --num_train_epochs 3 \\n  --output_dir bert-base-cased-finetuned-qqp \\n  --push_to_hub \\n  --hub_strategy all_checkpoints \\n  --logging_strategy epoch \\n  --save_strategy epoch \\n  --evaluation_strategy epoch \\n```
 
 
 ### Training hyperparameters
