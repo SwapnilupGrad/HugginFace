@@ -41,6 +41,8 @@ It achieves the following results on the evaluation set:
 - F1: 0.8768
 - Combined Score: 0.8926
 
+The model was fine-tuned to compare [google/fnet-base](https://huggingface.co/google/fnet-base) as introduced in [this paper](https://arxiv.org/abs/2105.03824) against [bert-base-cased](https://huggingface.co/bert-base-cased).
+
 ## Model description
 
 More information needed
