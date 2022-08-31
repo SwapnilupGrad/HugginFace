@@ -27,6 +27,39 @@ model-index:
     - name: F1
       type: f1
       value: 0.8767633750332712
+  - task:
+      type: natural-language-inference
+      name: Natural Language Inference
+    dataset:
+      name: glue
+      type: glue
+      config: qqp
+      split: validation
+    metrics:
+    - name: Accuracy
+      type: accuracy
+      value: 0.9083106604006925
+      verified: true
+    - name: Precision
+      type: precision
+      value: 0.8684245220830586
+      verified: true
+    - name: Recall
+      type: recall
+      value: 0.885052065838092
+      verified: true
+    - name: AUC
+      type: auc
+      value: 0.966124561811495
+      verified: true
+    - name: F1
+      type: f1
+      value: 0.876659457660955
+      verified: true
+    - name: loss
+      type: loss
+      value: 0.3751780092716217
+      verified: true
 ---
 
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
