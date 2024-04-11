@@ -6,7 +6,7 @@ tags:
 - generated_from_trainer
 - fnet-bert-base-comparison
 datasets:
-- glue
+- nyu-mll/glue
 metrics:
 - accuracy
 - f1
@@ -14,19 +14,19 @@ model-index:
 - name: bert-base-cased-finetuned-qqp
   results:
   - task:
-      name: Text Classification
       type: text-classification
+      name: Text Classification
     dataset:
       name: GLUE QQP
       type: glue
       args: qqp
     metrics:
-    - name: Accuracy
-      type: accuracy
+    - type: accuracy
       value: 0.9083848627256987
-    - name: F1
-      type: f1
+      name: Accuracy
+    - type: f1
       value: 0.8767633750332712
+      name: F1
 ---
 
 <!-- This model card has been generated automatically according to the information the Trainer had access to. You
